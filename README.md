@@ -30,7 +30,7 @@ python app.py
 ```
 
 
-# Gcloud cli
+# Gcloud cli - This will download a toolkit that I've used to pull data from GCP cloud
 https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe
 
 ```bash
