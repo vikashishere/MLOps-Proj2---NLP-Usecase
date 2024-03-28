@@ -16,10 +16,37 @@
 #     raise CustomException(e, sys)
 # ----------------------------------------------------------------------
 
+# Below code block is for the testing purpose for downloading data from gcloud storage
+# from hate.logger import logging
+# from hate.exception import CustomException
+# import sys
+# from hate.configuration.gcloud_syncer import GCloudSync
+
+# obj = GCloudSync()
+# obj.sync_folder_from_gcloud("mlops-proj2-hatespeech", "dataset.zip", "download")
+
+# ----------------------------------------------------------------------
 from hate.logger import logging
 from hate.exception import CustomException
 import sys
 from hate.configuration.gcloud_syncer import GCloudSync
+from hate.components.data_ingestion import DataIngestion
+from hate.entity.config_entity import DataIngestionConfig
+import os
+from zipfile import ZipFile
+from hate.logger import logging
+from hate.exception import CustomException
+from hate.configuration.gcloud_syncer import GCloudSync
+from hate.entity.config_entity import DataIngestionConfig
+from hate.entity.artifact_entity import DataIngestionArtifacts
 
-obj = GCloudSync()
-obj.sync_folder_from_gcloud("mlops-proj2-hatespeech", "dataset.zip", "download/dataset.zip")
+obj = DataIngestion(DataIngestionConfig)
+obj.get_data_from_gcloud()
+
+
+
+
+
+
+
+

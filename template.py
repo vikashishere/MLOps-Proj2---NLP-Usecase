@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import logging
 
+# Whenever this py file is executed, below code will show the log in the terminal
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 
